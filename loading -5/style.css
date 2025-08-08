@@ -1,0 +1,455 @@
+body{
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+
+.solarPaner{
+    height: 900px;
+    width: 900px;
+    background-color: rgba(47, 49, 49, 0.355);
+    position: relative;
+}
+
+/* --------------------*/
+
+.sun{
+    height: 100px;
+    width: 100px;
+    background-color: #d41f1f;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background-image: url(sun1.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 50%;
+
+    animation: sunOwn 20s linear infinite reverse;
+
+}
+@keyframes sunOwn {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------- */
+/* ---------------বুধ------------------ */
+
+.Mercury{
+    height: 100px;
+    width: 100px;
+    background-color: #d8393900;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    animation: MercuryOrbit 5s linear infinite;
+
+}
+
+.Mercury::after{
+    position: absolute;
+    content: '';
+    height: 10%;
+    width: 10%;
+    background-color: rgba(240, 248, 255, 0);
+
+    background-image: url(mercury.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: MercuryOrbit 5s linear infinite;
+}
+
+@keyframes MercuryOrbit {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------- */
+/* ---------------শুক্র------------------ */
+
+.Venus{
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    animation: VenusOrbit 7s linear infinite;
+}
+.Venus::before{
+    position: absolute;
+    content: '';
+    height: 10%;
+    width: 10%;
+    background-color: #00000000;
+    background-image: url(Venus_globe_-_transparent_background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: Venus 35s linear infinite;
+}
+@keyframes Venus {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes VenusOrbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ------------------------------------- */
+/* ---------------পৃথিবী------------------ */
+
+.earth{
+    height: 180px;
+    width: 180px;
+    background-color: #ffffff00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    animation: earthOrbit 10s linear infinite;
+}
+.earth::before{
+    position: absolute;
+    content: '';
+    height: 15%;
+    width: 15%;
+    background-color: #00000000;
+    background-image: url(earth-png-33.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: earth 10s linear infinite;
+}
+@keyframes earthOrbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes earth {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.moon{
+    height: 40px;
+    width: 40px;
+    background-color: #ff2c2c00;
+    position: relative;
+    top: -5px;
+    left: -5px;
+    animation: moonOrbit 5s linear infinite;
+}
+@keyframes moonOrbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+
+.moon::before{
+    position: absolute;
+    content: '';
+    height: 20%;
+    width: 20%;
+    background-color: #00000000;
+    background-image: url(full-moon-png-6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: moon 5s linear infinite;
+}
+
+@keyframes moon {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+
+
+/* ------------------------------------- */
+/* ---------------মঙ্গল------------------ */
+
+.mars{
+    height: 230px;
+    width: 230px;
+    background-color: #00000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    animation: marsOrbit 13s .3s linear infinite;
+}
+.mars::before{
+    position: absolute;
+    content: '';
+    height: 10%;
+    width: 10%;
+    background-color: #00000000;
+    background-image: url(mars.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: mars 35s linear infinite;
+}
+@keyframes mars {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes marsOrbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* ------------------------------------- */
+/* ---------------বৃহঃপতি------------------ */
+
+.Jupiter{
+    height: 380px;
+    width: 380px;
+    background-color: #00000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    animation: JupiterOrbit 20s linear infinite;
+}
+.Jupiter::before{
+    position: absolute;
+    content: '';
+    height: 18%;
+    width: 18%;
+    background-color: #00000000;
+    background-image: url(jupiter.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: Jupiter 5s linear infinite;
+}
+@keyframes Jupiter {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes JupiterOrbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ------------------------------------- */
+/* ---------------শনি------------------ */
+
+.Saturn{
+    height: 500px;
+    width: 500px;
+    background-color: #00000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    animation: SaturnOrbit 30s linear infinite;
+}
+.Saturn::before{
+    position: absolute;
+    content: '';
+    height: 15%;
+    width: 15%;
+    background-color: #00000000;
+    background-image: url(Entire_Saturn.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: Saturn 60s linear infinite;
+}
+@keyframes Saturn {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes SaturnOrbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------- */
+/* ---------------ইউরেনাস----------------- */
+
+.unenus{
+    height: 570px;
+    width: 570px;
+    background-color: #00000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    animation: unenusOrbit 40s linear infinite;
+}
+.unenus::before{
+    position: absolute;
+    content: '';
+    height: 8%;
+    width: 8%;
+    background-color: #00000000;
+    background-image: url(uranus-png.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: unenus 12s linear infinite;
+}
+@keyframes unenus {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes unenusOrbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------- */
+/* ---------------নেপচুন----------------- */
+
+.neptun{
+    height: 650px;
+    width: 650px;
+    background-color: #ffffff00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    animation: neptunOrbit 50s linear infinite;
+}
+.neptun::before{
+    position: absolute;
+    content: '';
+    height: 7%;
+    width: 7%;
+    background-color: #00000000;
+    background-image: url(Neptune.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    animation: neptun 10s linear infinite;
+}
+@keyframes neptun {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes neptunOrbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
