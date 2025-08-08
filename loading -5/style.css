@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", serif;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #05042a;
+}
+
+.container{
+  display: flex;
+}
+.simpleText{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+li{
+  position: relative;
+  list-style: none;
+  color: #ff3b25;
+  font-size: 60px;
+  font-weight: 600;
+  top: 0;
+  animation: upper 12s steps(4) infinite ;
+}
+
+@keyframes upper {
+  100%{
+    top: -350px;
+  }
+}
+
+.animationText{
+  height: 90px;
+  line-height: 90px;
+  background: #000;
+  padding-left: 2px;
+  overflow: hidden;
+}
+
+li::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid #ff3b25;
+  left: 0;
+  background: #05042a;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%, 60%{
+    left: 100%;
+  }
+}
+
+.one{
+  margin-top: 3px;
+}
+
+.two{
+  margin-top: -2px;
+}
+
+.three{
+  margin-top: -3px;
+}
+
+.four{
+  margin-top: -3px;
+}
