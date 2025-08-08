@@ -1,0 +1,98 @@
+/* <!-- Code by Asadujjaman Alif --> */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.mainContainer {
+  position: relative;
+}
+
+.mainContainer::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background-color: #000000;
+  z-index: 111;
+  border-radius: 50%;
+  top: -5px;
+  left: 8px;
+}
+.rakkhosh::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 50px;
+  background-color: #fff824;
+  border-radius: 100px 100px 0 0;
+  transform: translate(-50%, -50%);
+  transform-origin: center bottom;
+
+  animation: rakh-top 0.5s linear infinite;
+}
+.rakkhosh::after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 50px;
+  background-color: #fff824;
+  border-radius: 0 0 100px 100px;
+  transform: translate(-50%, 50%);
+  transform-origin: center top;
+
+  animation: rakh-bot 0.5s linear infinite;
+}
+
+@keyframes rakh-top {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-30deg);
+  }
+}
+@keyframes rakh-bot {
+  0%,
+  100% {
+    transform: translate(-50%, 50%) rotate(0);
+  }
+  50% {
+    transform: translate(-50%, 50%) rotate(30deg);
+  }
+}
+
+.food {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 8px;
+  z-index: -1;
+}
+
+.food:nth-child(1) {
+  left: 90px;
+  animation: foodStage 0.5s infinite;
+}
+.food:nth-child(2) {
+  left: 60px;
+  animation: foodStage 0.5s infinite;
+}
+.food:nth-child(3) {
+  left: 30px;
+  animation: foodStage 0.5s infinite;
+}
+.food:nth-child(4) {
+  opacity: 0;
+}
+@keyframes foodStage {
+  100% {
+    transform: translate(-24px, 0);
+  }
+}
